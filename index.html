@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>李思霖｜个人简历</title>
+  <meta name="description" content="李思霖的个人简历：生物医学工程、EEG、VR 神经反馈与机器学习研究经历。" />
+  <style>
+    :root {
+      --bg: #f3f6fb;
+      --paper: #ffffff;
+      --ink: #142033;
+      --muted: #64748b;
+      --line: #dbe5f2;
+      --blue: #2563eb;
+      --blue-2: #0f4ac6;
+      --cyan: #06b6d4;
+      --soft: #eef6ff;
+      --green-soft: #edfdf7;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, .18), transparent 34rem),
+        radial-gradient(circle at 90% 10%, rgba(6, 182, 212, .18), transparent 30rem),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 42px auto;
+    }
+
+    .resume {
+      overflow: hidden;
+      border: 1px solid rgba(219, 229, 242, .9);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 36px;
+      padding: 50px 54px 42px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(15, 35, 82, .96), rgba(37, 99, 235, .94)),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.28), transparent 18rem);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -120px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .09);
+    }
+
+    .hero > * { position: relative; z-index: 1; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      color: rgba(255,255,255,.86);
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 22px 0 10px;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1;
+      letter-spacing: .05em;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 650px;
+      color: rgba(255,255,255,.86);
+      font-size: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #dbeafe;
+      font-size: 13px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    .contact-card {
+      align-self: end;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 22px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .contact-card dl {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 11px 14px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .contact-card dt { color: rgba(255,255,255,.66); }
+    .contact-card dd { margin: 0; color: #fff; overflow-wrap: anywhere; }
+
+    .content {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      gap: 0;
+    }
+
+    aside {
+      padding: 36px 30px 42px;
+      background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+      border-right: 1px solid var(--line);
+    }
+
+    main {
+      padding: 36px 44px 46px;
+    }
+
+    .section { margin-bottom: 34px; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      font-size: 18px;
+      letter-spacing: .08em;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      box-shadow: 0 0 0 6px rgba(37, 99, 235, .1);
+    }
+
+    .info-list,
+    .award-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .info-list li,
+    .award-list li {
+      padding: 13px 14px;
+      border: 1px solid #e6eef8;
+      border-radius: 16px;
+      background: rgba(255,255,255,.78);
+    }
+
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    .value {
+      display: block;
+      margin-top: 3px;
+      font-weight: 650;
+    }
+
+    .award-list .date {
+      color: var(--blue-2);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .award-list .desc {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      bottom: 12px;
+      width: 2px;
+      background: linear-gradient(var(--blue), rgba(37, 99, 235, 0));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 9px;
+      width: 18px;
+      height: 18px;
+      border: 4px solid #dbeafe;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .time {
+      color: var(--blue-2);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .school {
+      margin-top: 4px;
+      font-size: 16px;
+      font-weight: 750;
+    }
+
+    .school small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project {
+      position: relative;
+      padding: 22px 24px 22px 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,251,255,.96));
+      box-shadow: 0 12px 28px rgba(15, 23, 42, .06);
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 22px;
+      bottom: 22px;
+      width: 5px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--blue), var(--cyan));
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.45;
+    }
+
+    .project .period {
+      flex: 0 0 auto;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--blue-2);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--soft);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 13px;
+    }
+
+    .pill {
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: #334155;
+      font-size: 12px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+    }
+
+    .project p {
+      margin: 0;
+      color: #344256;
+      font-size: 15px;
+    }
+
+    .highlight {
+      margin-top: 12px;
+      padding: 11px 13px;
+      border-radius: 15px;
+      color: #0f5132;
+      font-size: 14px;
+      background: var(--green-soft);
+      border: 1px solid #cdf7e4;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .page { width: min(100% - 20px, 760px); margin: 16px auto; }
+      .hero, .content { grid-template-columns: 1fr; }
+      .hero { padding: 38px 28px; }
+      aside { border-right: none; border-bottom: 1px solid var(--line); }
+      main { padding: 32px 24px 38px; }
+      .project-head { display: block; }
+      .project .period { display: inline-flex; margin-top: 10px; }
+      .contact-card { align-self: stretch; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; }
+      .resume { box-shadow: none; border: none; border-radius: 0; }
+      .hero { color: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .project, .info-list li, .award-list li { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="resume">
+      <header class="hero">
+        <div>
+          <span class="eyebrow">Biomedical Engineering Resume</span>
+          <h1>李思霖</h1>
+          <p class="subtitle">生物医学工程背景，研究方向覆盖眼动追踪、脑电数据分析、睡眠分类、EEG 与 VR 神经反馈情绪调节系统。</p>
+          <div class="tags" aria-label="关键词">
+            <span class="tag">EEG Analysis</span>
+            <span class="tag">VR Feedback</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Biomedical Engineering</span>
+          </div>
+        </div>
+        <div class="contact-card" aria-label="联系方式">
+          <dl>
+            <dt>邮箱</dt><dd><a href="mailto:zyl263640688@gmail.com">zyl263640688@gmail.com</a></dd>
+            <dt>电话</dt><dd><a href="tel:15202880108">15202880108</a></dd>
+            <dt>现住址</dt><dd>日本 · 福冈市</dd>
+            <dt>出生</dt><dd>2001 年 12 月 04 日</dd>
+            <dt>性别</dt><dd>男性</dd>
+          </dl>
+        </div>
+      </header>
+
+      <div class="content">
+        <aside>
+          <section class="section">
+            <h2 class="section-title">基本信息</h2>
+            <ul class="info-list">
+              <li><span class="label">本科学校</span><span class="value">电子科技大学</span></li>
+              <li><span class="label">专业</span><span class="value">生命科学与技术学院 · 生物医学工程</span></li>
+              <li><span class="label">当前所属</span><span class="value">九州大学 · 冈本研究室</span></li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">语言与获奖</h2>
+            <ul class="award-list">
+              <li><span class="date">2024 年 6 月</span><span class="desc">TOEFL · 105 分</span></li>
+              <li><span class="date">2023 年 12 月</span><span class="desc">JLPT-N2 · 176 分</span></li>
+              <li><span class="date">2021 年 5 月</span><span class="desc">电子科技大学生物医学工程创新设计竞赛 · 校级一等奖</span></li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">教育背景</h2>
+            <ul class="timeline">
+              <li class="timeline-item">
+                <div class="time">2025 年 4 月 ～ 至今</div>
+                <div class="school">九州大学 · 冈本研究室</div>
+              </li>
+              <li class="timeline-item">
+                <div class="time">2019 年 8 月 ～ 2023 年 6 月</div>
+                <div class="school">电子科技大学<small>生命科学与技术学院 · 生物医学工程</small></div>
+              </li>
+            </ul>
+          </section>
+        </aside>
+
+        <main>
+          <section class="section">
+            <h2 class="section-title">研究经历</h2>
+            <ul class="project-list">
+              <li class="project">
+                <div class="project-head">
+                  <h3>生物医学工程创新设计竞赛：基于眼动追踪的信息输入系统</h3>
+                  <span class="period">2021 年 3～5 月</span>
+                </div>
+                <div class="meta">
+                  <span class="pill">指导教师：李凌 教授</span>
+                  <span class="pill">职务：队长</span>
+                  <span class="pill">Python / OpenCV</span>
+                </div>
+                <p>开发面向人机交互场景的眼动追踪系统，利用普通电脑摄像头采集用户面部图像并进行处理，实现视线方向识别，探索低成本视觉交互方法。</p>
+                <div class="highlight">负责整体方案设计与程序开发；面部、眼部参数识别基于 Python 与 OpenCV 编写，并使用基于 Haar-like 特征的 AdaBoost 方法进行检测。</div>
+              </li>
+
+              <li class="project">
+                <div class="project-head">
+                  <h3>生命学院科研训练计划：时间注意效应的脑电数据分析</h3>
+                  <span class="period">2021 年 9 月 ～ 2022 年 4 月</span>
+                </div>
+                <div class="meta">
+                  <span class="pill">指导教师：李凌 教授</span>
+                  <span class="pill">视觉注意与眼动实验室</span>
+                  <span class="pill">EEG</span>
+                </div>
+                <p>在时间注意效应范式下采集并分析脑电数据，重点研究时间注意相关的神经活动特征。</p>
+              </li>
+
+              <li class="project">
+                <div class="project-head">
+                  <h3>毕业论文：基于心率变异性与 LSTM 网络的睡眠分类研究</h3>
+                  <span class="period">2022 年 12 月 ～ 2023 年 5 月</span>
+                </div>
+                <div class="meta">
+                  <span class="pill">指导教师：曾东 讲师</span>
+                  <span class="pill">HRV</span>
+                  <span class="pill">LSTM / SVM</span>
+                </div>
+                <p>提取 HRV 时域、频域及非线性特征，采用 LSTM 与 SVM 对特征进行解析，实现睡眠阶段的 4 分类任务。</p>
+              </li>
+
+              <li class="project">
+                <div class="project-head">
+                  <h3>硕士研究：基于 EEG 与虚拟现实反馈的情绪调节系统研究</h3>
+                  <span class="period">2025 年 4 月 ～ 至今</span>
+                </div>
+                <div class="meta">
+                  <span class="pill">指导教师：冈本刚 副教授</span>
+                  <span class="pill">Unity / VR</span>
+                  <span class="pill">实时神经反馈</span>
+                  <span class="pill">机器学习</span>
+                </div>
+                <p>使用 Unity 构建结合 VR 环境与 EEG 信号分析的情绪调节系统，开发基于脑电特征与机器学习的实时神经反馈算法，并评估新型视觉反馈指标在情绪调节中的可行性。</p>
+              </li>
+            </ul>
+          </section>
+          <div class="footer-note">© 李思霖 · Resume Web Page</div>
+        </main>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
